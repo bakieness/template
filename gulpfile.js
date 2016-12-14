@@ -23,4 +23,6 @@ gulp.task('browserSync', function() {
       baseDir: 'www'
     },
   })
-});
+})
+
+gulp.task('default', ['watch']);
