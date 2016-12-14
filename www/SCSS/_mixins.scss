@@ -1,0 +1,60 @@
+// mixins
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin headings($size, $margin, $weight) {
+	display: block;
+    font-size: $size;
+    margin: $margin;
+    font-weight: $weight;
+}
+
+// EXAMPLE OF A BUTTON CLASS
+//@mixin customButton($radius, $color, $bgColor) {
+//	@include border-radius($radius);
+//	padding: 5px 25px;
+//    margin: 5px;
+//	color: $color;
+//    background-color: $bgColor;
+//}
+
+// media queries
+$mq: false !default;
+@mixin mq-min($a)
+{
+	@if $mq
+	{
+		@if $mq >= $a
+		{
+			@content;
+		}
+	}
+	@else
+	{
+		@media screen and (min-width: $a) 
+		{
+			@content;
+    }
+	}
+}
+@mixin mq-max($a)
+{
+	@if $mq
+	{
+		@if $mq <= $a
+		{
+			@content;
+		}
+	}
+	@else
+	{
+		@media screen and (max-width: $a) 
+		{
+			@content;
+    }
+	}
+}
