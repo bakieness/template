@@ -11,7 +11,7 @@ var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
 
 gulp.task('watch', ['browserSync', 'sass'], function(){
-  gulp.watch('www/SCSS/*.scss', ['sass']); 
+  gulp.watch('www/SCSS/**/*.scss', ['sass']); 
   gulp.watch('www/*.html', browserSync.reload); 
   gulp.watch('www/JS/**/*.js', browserSync.reload);
 })

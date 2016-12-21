@@ -33,7 +33,7 @@ $color-btns: (
 	@include clearfix;
 	.item {
 		float: left;
-		@include imagegrid(3, 2%);
+		@include imagegrid(4, 2%);
 	}
 	img {
 		display: block;

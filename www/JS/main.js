@@ -1,13 +1,13 @@
 $(document).ready(function(){
     //mobile navigation toggle button
     $(".toggle").click(function(){
-    	var navHeight = $('.mobnav').height();
-    	if(navHeight == 0)
+    	var navHeight = $("header nav").height();
+    	if(navHeight <= 50)
     	{
-    		$('.mobnav').animate({ 'height': '184' }, 400);
+    		$("header nav").animate({ 'height': '401' }, 400);
     	} else {
-    		$('.mobnav').animate({ 'height': '0' }, 400);
-    	}
+            $("header nav").animate({ 'height': '50' }, 400);
+        }
     });
 
     //on mobile navigation close menu

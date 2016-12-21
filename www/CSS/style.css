@@ -427,11 +427,11 @@ h6 {
 
 .grid .item {
   float: left;
-  width: 32%; }
+  width: 23.5%; }
   .grid .item:nth-child(n) {
     margin-right: 2%;
     margin-bottom: 2%; }
-  .grid .item:nth-child(3n) {
+  .grid .item:nth-child(4n) {
     margin-right: 0;
     margin-bottom: 0; }
 
@@ -548,6 +548,10 @@ h6 {
 
 header nav {
   background-color: #003f57; }
+  @media (min-width: 0px) and (max-width: 760px) {
+    header nav {
+      height: 50px;
+      overflow: hidden; } }
 
 nav .branding {
   float: left;
@@ -573,10 +577,17 @@ nav ul {
     clear: both; }
 
 nav ul li {
-  padding: 10px 5px; }
+  padding: 15px 5px; }
   @media (min-width: 760px) {
     nav ul li {
       float: right; } }
+
+nav .toggle {
+  color: #EEE8D6;
+  font-size: 20px; }
+  @media (min-width: 760px) {
+    nav .toggle {
+      display: none; } }
 
 nav ul li a {
   text-decoration: none;

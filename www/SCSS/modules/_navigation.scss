@@ -1,6 +1,10 @@
 nav {
 	header & {
 		background-color: darken($blue, 15%);
+		@include break(0px, 760px) {
+			height: 50px;
+			overflow: hidden;
+		}
 	}
 
 	.branding {
@@ -29,7 +33,15 @@ nav {
 		@include break(760px) {
 			float: right;
 		}
-		padding: 10px 5px;
+		padding: 15px 5px;
+	}
+
+	.toggle{
+		color: $color-backgrounds;
+		font-size: 20px;
+		@include break(760px) {
+			display: none;
+		}
 	}
 
 	ul li a {
